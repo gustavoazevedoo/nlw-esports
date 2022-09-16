@@ -1,4 +1,4 @@
-import { FlatList, Image, TouchableOpacity, View, Text } from "react-native";
+import { FlatList, Image, TouchableOpacity, View, Text, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { Entypo } from '@expo/vector-icons'
@@ -49,7 +49,10 @@ export function Game() {
 
   return (
     <Background>
-      <SafeAreaView style={styles.container}>
+      <ScrollView 
+        style={styles.container}
+        contentContainerStyle={{ alignItems: 'center', paddingBottom: 20 }}
+      >
           <View style={styles.header}>
             <TouchableOpacity onPress={handleGoBack}>
               <Entypo
@@ -94,7 +97,7 @@ export function Game() {
               </Text>
             )}
           />
-      </SafeAreaView>
+      </ScrollView>
     </Background>
   );
 }

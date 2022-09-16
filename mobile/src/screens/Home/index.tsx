@@ -36,7 +36,7 @@ export function Home() {
   return (
     <Background>
       <SafeAreaView style={styles.container}>
-        <ScrollView style={{ flex: 1, marginBottom: 20 }} contentContainerStyle={{ alignItems: "center" }}>
+        <ScrollView style={{ flex: 1 }} contentContainerStyle={{ alignItems: "center", paddingBottom: 20 }}>
           <Image
             source={logoImg}
             style={styles.logo}
